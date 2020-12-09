@@ -21,19 +21,11 @@ const CurrencyEContainer: React.FunctionComponent<ICurrencyProps> = ({
                                                                        // setAction,
                                                                        // changeCurrency,
                                                                      }) => {
-
-  // const currencies = useSelector<IGlobalState, Array<CurrencyType>>(state => state.currency.currencies);
-  // const currentCurrency = useSelector<IGlobalState, string>(state => state.currency.currentCurrency);
-  // const isBuying = useSelector<IGlobalState, boolean>(state => state.currency.isBuying);
-  // const amountOfBYN = useSelector<IGlobalState, string>(state => state.currency.amountOfBYN);
-  // const amountOfCurrency = useSelector<IGlobalState, string>(state => state.currency.amountOfBYN);
-
-  const stateFromReducer = useSelector<IGlobalState, CurrencyState>(state => state.currency);
-  const currencies = stateFromReducer.currencies;
-  const currentCurrency = stateFromReducer.currentCurrency;
-  const isBuying = stateFromReducer.isBuying;
-  const amountOfCurrency = stateFromReducer.amountOfCurrency;
-  const amountOfBYN = stateFromReducer.amountOfBYN;
+  const currencies = useSelector<IGlobalState, Array<CurrencyType>>(state => state.currency.currencies);
+  const currentCurrency = useSelector<IGlobalState, string>(state => state.currency.currentCurrency);
+  const isBuying = useSelector<IGlobalState, boolean>(state => state.currency.isBuying);
+  const amountOfBYN = useSelector<IGlobalState, string>(state => state.currency.amountOfBYN);
+  const amountOfCurrency = useSelector<IGlobalState, string>(state => state.currency.amountOfCurrency);
 
   const action = useDispatch();
 
