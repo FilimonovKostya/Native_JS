@@ -112,8 +112,4 @@ const mapStateToProps = (state: IGlobalState) => {
 //   };
 // };
 
-export const CurrencyExchangeContainer = compose(connect(mapStateToProps, {
-  setCurrencyAmount,
-  setAction,
-  changeCurrency,
-}))(CurrencyEContainer);
+export const CurrencyExchangeContainer = compose(connect(mapStateToProps, {}))(CurrencyEContainer);

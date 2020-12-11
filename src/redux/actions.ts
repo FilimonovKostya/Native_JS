@@ -5,31 +5,31 @@ export enum ACTIONS_TYPE {
 }
 
 export type ChangeCurrencyFieldType = {
-  type: 'CHANGE-CURRENCY-FIELD'
+  type: ACTIONS_TYPE.CHANGE_CURRENCY_FIELD_TYPE
   amountOfBYN: string
   amountOfCurrency: string
 };
 
 export const setCurrencyAmount = (amountOfBYN: string, amountOfCurrency: string): ChangeCurrencyFieldType => {
-  return { type: 'CHANGE-CURRENCY-FIELD', amountOfBYN, amountOfCurrency };
+  return { type: ACTIONS_TYPE.CHANGE_CURRENCY_FIELD_TYPE, amountOfBYN, amountOfCurrency };
 };
 
 export type ChangeAction = {
-  type: 'CHANGE-ACTION'
+  type: ACTIONS_TYPE.CHANGE_CHANGE_ACTION
   isBuying: boolean
 };
 
 export const setAction = (isBuying: boolean): ChangeAction => {
-  return { type: 'CHANGE-ACTION', isBuying };
+  return { type: ACTIONS_TYPE.CHANGE_CHANGE_ACTION, isBuying };
 };
 
 export type ChangeCurrentCurrencyType = {
-  type: 'CHANGE-CURRENT-CURRENCY'
+  type: ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY
   currentCurrency: string
 };
 
 export const changeCurrency = (currentCurrency: string): ChangeCurrentCurrencyType => {
-  return { type: 'CHANGE-CURRENT-CURRENCY', currentCurrency };
+  return { type: ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY, currentCurrency };
 };
 
 export type CurrencyReducersTypes = ChangeCurrencyFieldType | ChangeAction | ChangeCurrentCurrencyType;
